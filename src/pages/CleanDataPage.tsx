@@ -111,7 +111,7 @@ export const CleanDataPage: React.FC = () => {
         {/* Filter & Search Bar */}
         <div className="flex flex-wrap items-center gap-2.5">
           <div className="relative">
-            <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
@@ -186,7 +186,7 @@ export const CleanDataPage: React.FC = () => {
                   <td className="py-3.5 px-6 font-semibold text-slate-100 group-hover:text-emerald-300 transition-colors">
                     <div className="flex items-center gap-2">
                       <span>{item.metricName}</span>
-                      <span className="text-[10px] font-mono font-normal text-slate-500">
+                      <span className="text-[10px] font-mono font-normal text-slate-400">
                         ({item.category})
                       </span>
                     </div>
@@ -254,14 +254,14 @@ export const CleanDataPage: React.FC = () => {
               {/* Value Box */}
               <div className="p-4 rounded-xl bg-[#0B0F17] border border-[#1E293B] flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase font-mono text-slate-500 block">Reported Value</span>
+                  <span className="text-[10px] uppercase font-mono text-slate-400 block">Reported Value</span>
                   <span className="font-mono text-2xl font-bold text-white mt-0.5 block">
                     {selectedMetric.value}{' '}
                     <span className="text-xs text-slate-400 font-normal">{selectedMetric.unit}</span>
                   </span>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] uppercase font-mono text-slate-500 block">Review Status</span>
+                  <span className="text-[10px] uppercase font-mono text-slate-400 block">Review Status</span>
                   <span className="font-mono text-xs font-bold text-emerald-400 mt-1 inline-flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     {selectedMetric.verificationStatus}
@@ -272,28 +272,28 @@ export const CleanDataPage: React.FC = () => {
               {/* Traceability Grid */}
               <div className="grid grid-cols-2 gap-3 font-mono">
                 <div className="p-3 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                  <span className="text-[10px] uppercase text-slate-500 block">Source</span>
+                  <span className="text-[10px] uppercase text-slate-400 block">Source</span>
                   <span className="font-semibold text-slate-200 mt-0.5 block truncate" title={selectedMetric.sourceDocument}>
                     {selectedMetric.sourceDocument}
                   </span>
                 </div>
 
                 <div className="p-3 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                  <span className="text-[10px] uppercase text-slate-500 block">Page</span>
+                  <span className="text-[10px] uppercase text-slate-400 block">Page</span>
                   <span className="font-bold text-emerald-400 mt-0.5 block">
                     Page {selectedMetric.sourcePage}
                   </span>
                 </div>
 
                 <div className="p-3 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                  <span className="text-[10px] uppercase text-slate-500 block">Reporting Period</span>
+                  <span className="text-[10px] uppercase text-slate-400 block">Reporting Period</span>
                   <span className="font-semibold text-slate-200 mt-0.5 block">
                     {selectedMetric.reportingPeriod}
                   </span>
                 </div>
 
                 <div className="p-3 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                  <span className="text-[10px] uppercase text-slate-500 block">Confidence</span>
+                  <span className="text-[10px] uppercase text-slate-400 block">Confidence</span>
                   <span className="font-bold text-sky-400 mt-0.5 block">
                     {selectedMetric.confidenceScore}% ({selectedMetric.confidenceTier})
                   </span>
@@ -302,7 +302,7 @@ export const CleanDataPage: React.FC = () => {
 
               {/* Section */}
               <div className="p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                <span className="text-[10px] uppercase font-mono text-slate-500 block mb-1">Section Citation</span>
+                <span className="text-[10px] uppercase font-mono text-slate-400 block mb-1">Section Citation</span>
                 <span className="font-mono text-slate-300 text-[11px] block">
                   {selectedMetric.sourceSection}
                 </span>
@@ -310,7 +310,7 @@ export const CleanDataPage: React.FC = () => {
 
               {/* Methodology / Standard Taxonomy */}
               <div className="p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B] space-y-1">
-                <span className="text-[10px] uppercase font-mono text-slate-500 block">Methodology &amp; Standards</span>
+                <span className="text-[10px] uppercase font-mono text-slate-400 block">Methodology &amp; Standards</span>
                 <div className="font-mono text-slate-300 text-[11px]">
                   {selectedCanonical ? (
                     <div>
@@ -325,7 +325,7 @@ export const CleanDataPage: React.FC = () => {
 
               {/* Source Snippet */}
               <div className="p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B]">
-                <span className="text-[10px] uppercase font-mono text-slate-500 block mb-1">Source Excerpt</span>
+                <span className="text-[10px] uppercase font-mono text-slate-400 block mb-1">Source Excerpt</span>
                 <p className="font-mono text-slate-300 text-[11px] italic leading-relaxed">
                   &ldquo;{selectedMetric.sourceSnippet}&rdquo;
                 </p>

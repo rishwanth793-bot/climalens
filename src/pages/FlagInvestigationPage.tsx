@@ -78,7 +78,7 @@ export const FlagInvestigationPage: React.FC = () => {
 
         {/* Search */}
         <div className="relative">
-          <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
@@ -121,7 +121,7 @@ export const FlagInvestigationPage: React.FC = () => {
                   {/* Metric */}
                   <td className="py-4 px-6 font-semibold text-white">
                     <div>{flag.metric}</div>
-                    <div className="text-[10px] text-slate-500 font-mono mt-0.5">{flag.category}</div>
+                    <div className="text-[10px] text-slate-400 font-mono mt-0.5">{flag.category}</div>
                   </td>
 
                   {/* Change */}
@@ -195,15 +195,15 @@ export const FlagInvestigationPage: React.FC = () => {
               {/* Quantified Variance Box */}
               <div className="grid grid-cols-3 gap-2 p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B] font-mono text-center">
                 <div>
-                  <span className="text-[9px] uppercase text-slate-500 block">Reported</span>
+                  <span className="text-[9px] uppercase text-slate-400 block">Reported</span>
                   <span className="font-bold text-white text-xs mt-0.5 block">{selectedFlag.reportedValue}</span>
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase text-slate-500 block">Baseline</span>
+                  <span className="text-[9px] uppercase text-slate-400 block">Baseline</span>
                   <span className="font-semibold text-slate-400 text-xs mt-0.5 block">{selectedFlag.referenceValue}</span>
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase text-slate-500 block">Variance</span>
+                  <span className="text-[9px] uppercase text-slate-400 block">Variance</span>
                   <span className="font-extrabold text-amber-400 text-xs mt-0.5 block">{selectedFlag.variancePercent}</span>
                 </div>
               </div>
@@ -222,7 +222,7 @@ export const FlagInvestigationPage: React.FC = () => {
               <div className="p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B] flex items-center justify-between font-mono text-xs">
                 <div>
                   <span className="text-slate-200 font-semibold block">{selectedFlag.sourceDocument}</span>
-                  <span className="text-[11px] text-slate-500">{selectedFlag.sourceSection}</span>
+                  <span className="text-[11px] text-slate-400">{selectedFlag.sourceSection}</span>
                 </div>
                 <button
                   onClick={() => triggerContextualPdfView(null, selectedFlag.sourcePage)}

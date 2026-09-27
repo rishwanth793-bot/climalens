@@ -185,7 +185,7 @@ export const UploadPage: React.FC = () => {
 
               {/* Sample Document Selectors */}
               <div className="mt-6 pt-5 border-t border-[#1E293B] text-left">
-                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 text-center font-mono">
+                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 text-center font-mono">
                   Or load sample corporate filing:
                 </div>
 
@@ -258,7 +258,7 @@ export const UploadPage: React.FC = () => {
                           ? 'bg-[#182338] border-emerald-500/80 text-white font-bold'
                           : isDone
                           ? 'bg-[#0B0F17] border-[#1E293B] text-slate-300'
-                          : 'bg-[#0B0F17]/40 border-[#1E293B]/40 text-slate-600'
+                          : 'bg-[#0B0F17]/40 border-[#1E293B]/40 text-slate-300'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -271,7 +271,7 @@ export const UploadPage: React.FC = () => {
                             <Loader2 className="w-3 h-3 text-sky-400 animate-spin" />
                           </div>
                         ) : (
-                          <div className="w-5 h-5 rounded-full bg-[#0B0F17] text-slate-600 border border-slate-800 flex items-center justify-center text-[10px]">
+                          <div className="w-5 h-5 rounded-full bg-[#0B0F17] text-slate-300 border border-slate-800 flex items-center justify-center text-[10px]">
                             {idx + 1}
                           </div>
                         )}

@@ -72,7 +72,7 @@ export const VerificationCenterPage: React.FC = () => {
 
     return (
       <div className="bg-[#0B0F17] p-2.5 rounded-xl border border-[#1E293B]">
-        <div className="flex items-center justify-between text-[9px] font-mono text-slate-500 mb-1">
+        <div className="flex items-center justify-between text-[9px] font-mono text-slate-400 mb-1">
           <span>Multi-Cycle Trajectory</span>
           <span className="text-amber-400 font-bold">Affected Point Highlighted</span>
         </div>
@@ -244,15 +244,15 @@ export const VerificationCenterPage: React.FC = () => {
                   <div className="lg:col-span-8 space-y-3 text-xs">
                     <div className="grid grid-cols-3 gap-3 p-3.5 rounded-xl bg-[#0B0F17] border border-[#1E293B] font-mono">
                       <div>
-                        <span className="text-[10px] uppercase text-slate-500 block">Reported Value</span>
+                        <span className="text-[10px] uppercase text-slate-400 block">Reported Value</span>
                         <span className="text-base font-bold text-white mt-0.5 block">{flag.reportedValue}</span>
                       </div>
                       <div>
-                        <span className="text-[10px] uppercase text-slate-500 block">Previous Period</span>
+                        <span className="text-[10px] uppercase text-slate-400 block">Previous Period</span>
                         <span className="text-base font-semibold text-slate-400 mt-0.5 block">{flag.referenceValue}</span>
                       </div>
                       <div>
-                        <span className="text-[10px] uppercase text-slate-500 block">Calculated Change</span>
+                        <span className="text-[10px] uppercase text-slate-400 block">Calculated Change</span>
                         <span className="text-base font-extrabold text-amber-400 mt-0.5 block">{flag.variancePercent}</span>
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export const VerificationCenterPage: React.FC = () => {
 
                 {/* Action Footer with INVESTIGATE button */}
                 <div className="pt-3 border-t border-[#1E293B] flex flex-wrap items-center justify-between gap-3">
-                  <span className="text-[10px] font-mono text-slate-500">
+                  <span className="text-[10px] font-mono text-slate-400">
                     Logged: {flag.createdAt} • Non-accusatory verification finding
                   </span>
 
@@ -357,15 +357,15 @@ export const VerificationCenterPage: React.FC = () => {
                 </span>
                 <div className="grid grid-cols-3 gap-2 font-mono text-center">
                   <div className="p-2 rounded-lg bg-[#111726] border border-[#1E293B]">
-                    <span className="text-[9px] text-slate-500 uppercase block">Reported</span>
+                    <span className="text-[9px] text-slate-400 uppercase block">Reported</span>
                     <span className="font-bold text-white text-xs mt-0.5 block">{investigatingFlag.reportedValue}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#111726] border border-[#1E293B]">
-                    <span className="text-[9px] text-slate-500 uppercase block">Baseline Ref</span>
+                    <span className="text-[9px] text-slate-400 uppercase block">Baseline Ref</span>
                     <span className="font-semibold text-slate-400 text-xs mt-0.5 block">{investigatingFlag.referenceValue}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#111726] border border-[#1E293B]">
-                    <span className="text-[9px] text-slate-500 uppercase block">Variance</span>
+                    <span className="text-[9px] text-slate-400 uppercase block">Variance</span>
                     <span className="font-extrabold text-amber-400 text-xs mt-0.5 block">{investigatingFlag.variancePercent}</span>
                   </div>
                 </div>
@@ -416,7 +416,7 @@ export const VerificationCenterPage: React.FC = () => {
               </div>
 
               {/* Ethical Guardrail Disclaimer */}
-              <div className="p-3 rounded-xl bg-[#0B0F17]/60 border border-[#1E293B] text-[10px] text-slate-500 leading-relaxed font-sans">
+              <div className="p-3 rounded-xl bg-[#0B0F17]/60 border border-[#1E293B] text-[10px] text-slate-400 leading-relaxed font-sans">
                 <strong className="text-slate-400">Ethical Governance Notice: </strong>
                 ClimateLens identifies potential inconsistencies for qualified human review. It does not state or imply fraud or falsification. The determination belongs solely to Lead Verifier {settings.reviewerName}.
               </div>

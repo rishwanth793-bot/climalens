@@ -110,7 +110,7 @@ export const EnvironmentalContextPage: React.FC = () => {
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-teal-300 bg-teal-500/10 px-2.5 py-0.5 rounded-full border border-teal-500/20">
               Zonal Environmental Intelligence
             </span>
-            <span className="text-xs text-slate-600">·</span>
+            <span className="text-xs text-slate-300">·</span>
             <span className="text-xs text-slate-400 font-medium">
               SPCB / TNPCB / CPCB CAAQMS Continuous Stations
             </span>
@@ -153,7 +153,7 @@ export const EnvironmentalContextPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => triggerContextualPdfView(null, 21)}
-              className="px-3 py-1.5 rounded-xl text-xs font-medium text-slate-200 bg-[#131B2E] hover:bg-[#1E293B] border border-[#1E293B] transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="px-3 py-1.5 rounded-xl text-xs font-medium text-slate-200 bg-[#0D121F] hover:bg-[#1E293B] border border-[#1E293B] transition-colors flex items-center gap-1.5 cursor-pointer"
               title="Inspect corporate stack emission filing in source PDF"
             >
               <Eye className="w-3.5 h-3.5 text-sky-400" />
@@ -171,7 +171,7 @@ export const EnvironmentalContextPage: React.FC = () => {
 
         {/* Metric Comparison Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
-          <div className="p-4 rounded-xl bg-[#131B2E] border border-emerald-500/20">
+          <div className="p-4 rounded-xl bg-[#0D121F] border border-emerald-500/20">
             <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wide block">
               Corporate Trend (Reported)
             </span>
@@ -184,7 +184,7 @@ export const EnvironmentalContextPage: React.FC = () => {
             </span>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#131B2E] border border-amber-500/20">
+          <div className="p-4 rounded-xl bg-[#0D121F] border border-amber-500/20">
             <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wide block">
               Regional Zonal Indicator
             </span>
@@ -197,7 +197,7 @@ export const EnvironmentalContextPage: React.FC = () => {
             </span>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+          <div className="p-4 rounded-xl bg-[#0D121F] border border-[#1E293B]">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide block">
               Monitoring Station Agency
             </span>
@@ -209,7 +209,7 @@ export const EnvironmentalContextPage: React.FC = () => {
             </span>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#131B2E] border border-sky-500/20">
+          <div className="p-4 rounded-xl bg-[#0D121F] border border-sky-500/20">
             <span className="text-[10px] font-bold text-sky-400 uppercase tracking-wide block">
               Data Confidence
             </span>
@@ -239,14 +239,14 @@ export const EnvironmentalContextPage: React.FC = () => {
         <div className="flex flex-wrap items-center gap-3 pt-2">
           <button
             onClick={() => showToast('Opening station raw hourly sensor log telemetry...')}
-            className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-900 bg-emerald-400 hover:bg-emerald-300 transition-all cursor-pointer shadow-xs"
+            className="px-4 py-2 rounded-xl text-xs font-semibold text-white bg-emerald-400 hover:bg-emerald-300 transition-all cursor-pointer shadow-xs"
           >
             View Regional Station Evidence
           </button>
 
           <button
             onClick={() => updateFlagStatus('CL-0044', 'Investigating', 'Reviewer opened zonal meteorological inversion study.')}
-            className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 bg-[#131B2E] hover:bg-[#1E293B] border border-[#1E293B] transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 bg-[#0D121F] hover:bg-[#1E293B] border border-[#1E293B] transition-colors cursor-pointer"
           >
             Mark Difference for Review
           </button>
@@ -275,7 +275,7 @@ export const EnvironmentalContextPage: React.FC = () => {
               <select
                 value={selectedCorporateMetric}
                 onChange={(e) => setSelectedCorporateMetric(e.target.value as any)}
-                className="px-3 py-1.5 rounded-lg bg-[#131B2E] border border-[#1E293B] text-xs text-slate-200 font-semibold focus:outline-hidden focus:border-emerald-500 cursor-pointer"
+                className="px-3 py-1.5 rounded-lg bg-[#0D121F] border border-[#1E293B] text-xs text-slate-200 font-semibold focus:outline-hidden focus:border-emerald-500 cursor-pointer"
               >
                 <option value="stackDust">Stack PM / Dust (-14%)</option>
                 <option value="scope1">Scope 1 GHG (+22%)</option>
@@ -420,7 +420,7 @@ export const EnvironmentalContextPage: React.FC = () => {
                 </div>
               </div>
 
-              <span className="text-[10px] text-slate-500 font-mono">
+              <span className="text-[10px] text-slate-400 font-mono">
                 Indexed to 100 in FY 2022–23
               </span>
             </div>
@@ -446,7 +446,7 @@ export const EnvironmentalContextPage: React.FC = () => {
                 className={`p-3.5 rounded-xl border text-xs cursor-pointer transition-all ${
                   selectedIndicatorId === ind.id
                     ? 'bg-emerald-500/10 border-emerald-500/40 shadow-xs ring-1 ring-emerald-500/30'
-                    : 'bg-[#131B2E] border-[#1E293B] hover:bg-[#1E293B]'
+                    : 'bg-[#0D121F] border-[#1E293B] hover:bg-[#1E293B]'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -469,7 +469,7 @@ export const EnvironmentalContextPage: React.FC = () => {
 
           {/* Regional Monitoring Station Infrastructure Card */}
           <div className="pt-3 border-t border-[#1E293B]">
-            <div className="rounded-xl overflow-hidden border border-[#1E293B] bg-[#131B2E]">
+            <div className="rounded-xl overflow-hidden border border-[#1E293B] bg-[#0D121F]">
               <div className="h-32 relative overflow-hidden">
                 <img
                   src={VISUAL_ASSETS.monitoringStation}

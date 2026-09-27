@@ -29,7 +29,7 @@ export const AdjustValueModal: React.FC = () => {
           </div>
           <button
             onClick={() => setAdjustingMetric(null)}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#131B2E] transition-colors"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#0D121F] transition-colors"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -37,7 +37,7 @@ export const AdjustValueModal: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          <div className="p-3.5 rounded-xl bg-[#131B2E] border border-[#1E293B] text-xs">
+          <div className="p-3.5 rounded-xl bg-[#0D121F] border border-[#1E293B] text-xs">
             <span className="text-slate-400 block mb-1">Extracted AI Value:</span>
             <div className="font-mono text-emerald-400 font-bold text-base">
               {adjustingMetric.value} {adjustingMetric.unit}
@@ -56,7 +56,7 @@ export const AdjustValueModal: React.FC = () => {
               defaultValue={adjustingMetric.value}
               onChange={(e) => setNewValue(e.target.value)}
               placeholder={`Enter verified ${adjustingMetric.unit} value`}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#131B2E] border border-[#1E293B] text-sm text-slate-100 font-mono focus:outline-hidden focus:border-emerald-500"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#0D121F] border border-[#1E293B] text-sm text-slate-100 font-mono focus:outline-hidden focus:border-emerald-500"
               required
             />
           </div>
@@ -70,7 +70,7 @@ export const AdjustValueModal: React.FC = () => {
               value={reason}
               onChange={(e) => setReason(e.target.value)}
               placeholder="E.g., Reconciled with sub-meter invoice #IN-291 or corrected OCR transcription artifact..."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#131B2E] border border-[#1E293B] text-xs text-slate-100 focus:outline-hidden focus:border-emerald-500"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#0D121F] border border-[#1E293B] text-xs text-slate-100 focus:outline-hidden focus:border-emerald-500"
               required
             />
             <span className="text-[10px] text-slate-400 mt-1 block">
@@ -82,13 +82,13 @@ export const AdjustValueModal: React.FC = () => {
             <button
               type="button"
               onClick={() => setAdjustingMetric(null)}
-              className="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-[#131B2E]"
+              className="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-[#0D121F]"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-slate-900 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-xs cursor-pointer"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-xs cursor-pointer"
             >
               <Check className="w-3.5 h-3.5" />
               <span>Confirm &amp; Log Adjustment</span>

@@ -38,7 +38,7 @@ export const SourcePanelModal: React.FC = () => {
           </div>
           <button
             onClick={() => setSelectedSourceMetric(null)}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#131B2E] transition-colors"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#0D121F] transition-colors"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -49,7 +49,7 @@ export const SourcePanelModal: React.FC = () => {
         <div className="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
           {/* Document & Page info grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-            <div className="p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <span className="text-[10px] uppercase font-bold text-slate-400 block">
                 Source Document
               </span>
@@ -58,7 +58,7 @@ export const SourcePanelModal: React.FC = () => {
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <span className="text-[10px] uppercase font-bold text-slate-400 block">
                 Page Number
               </span>
@@ -67,7 +67,7 @@ export const SourcePanelModal: React.FC = () => {
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <span className="text-[10px] uppercase font-bold text-slate-400 block">
                 Extracted Value
               </span>
@@ -76,7 +76,7 @@ export const SourcePanelModal: React.FC = () => {
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <span className="text-[10px] uppercase font-bold text-slate-400 block">
                 AI Confidence
               </span>
@@ -90,7 +90,7 @@ export const SourcePanelModal: React.FC = () => {
           </div>
 
           {/* Section & Table reference */}
-          <div className="p-3.5 rounded-xl bg-[#131B2E] border border-[#1E293B] text-xs">
+          <div className="p-3.5 rounded-xl bg-[#0D121F] border border-[#1E293B] text-xs">
             <div className="flex items-center justify-between text-slate-400 mb-1">
               <span className="text-[11px] font-bold text-slate-200">
                 Document Location:
@@ -149,7 +149,7 @@ export const SourcePanelModal: React.FC = () => {
                       <Scale className="w-3.5 h-3.5" />
                       Canonical Data Model &amp; SI Normalization
                     </span>
-                    <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[#131B2E] text-slate-300 border border-[#1E293B]">
+                    <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[#0D121F] text-slate-300 border border-[#1E293B]">
                       {canonical.standardTaxonomyCode}
                     </span>
                   </div>
@@ -171,7 +171,7 @@ export const SourcePanelModal: React.FC = () => {
                 </div>
 
                 {canonical.groundingEvaluations.length > 0 && (
-                  <div className="p-3.5 rounded-xl bg-[#131B2E] border border-emerald-500/20 text-xs space-y-2">
+                  <div className="p-3.5 rounded-xl bg-[#0D121F] border border-emerald-500/20 text-xs space-y-2">
                     <div className="text-[10px] font-mono font-bold uppercase text-emerald-300 flex items-center gap-1.5">
                       <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
                       Statutory Regulatory Grounding Citations
@@ -202,7 +202,7 @@ export const SourcePanelModal: React.FC = () => {
 
           {/* Standardization */}
           {metric.standardizedValue && (
-            <div className="text-xs bg-[#131B2E] p-3 rounded-xl border border-[#1E293B]">
+            <div className="text-xs bg-[#0D121F] p-3 rounded-xl border border-[#1E293B]">
               <span className="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">
                 Standardized Representation
               </span>
@@ -221,7 +221,7 @@ export const SourcePanelModal: React.FC = () => {
                 setAdjustingMetric(metric);
                 setSelectedSourceMetric(null);
               }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 bg-[#131B2E] hover:bg-[#1E293B] border border-[#1E293B] transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 bg-[#0D121F] hover:bg-[#1E293B] border border-[#1E293B] transition-colors cursor-pointer"
             >
               <Edit3 className="w-3.5 h-3.5 text-sky-400" />
               <span>Adjust</span>
@@ -257,7 +257,7 @@ export const SourcePanelModal: React.FC = () => {
                 verifyMetric(metric.id);
                 setSelectedSourceMetric(null);
               }}
-              className="flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-900 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-xs cursor-pointer"
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs font-semibold text-white bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-xs cursor-pointer"
             >
               <Check className="w-3.5 h-3.5" />
               <span>Verify &amp; Confirm</span>

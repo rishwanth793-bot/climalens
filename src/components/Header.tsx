@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
         <div className="flex items-center gap-3.5 min-w-0">
           <button
             onClick={onToggleMobileMenu}
-            className="p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-[#131B2E] lg:hidden"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-[#0D121F] lg:hidden"
             aria-label="Open navigation menu"
           >
             <Menu className="w-5 h-5" />
@@ -102,7 +102,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
           <div className="relative">
             <button
               onClick={() => setShowNotifications(!showNotifications)}
-              className="relative p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-[#131B2E] border border-transparent hover:border-[#1E293B] transition-colors"
+              className="relative p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-[#0D121F] border border-transparent hover:border-[#1E293B] transition-colors"
               aria-label="Notifications"
             >
               <Bell className="w-4.5 h-4.5" />
@@ -113,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
 
             {/* Notification Dropdown */}
             {showNotifications && (
-              <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-[#131B2E] border border-[#1E293B] rounded-2xl shadow-2xl py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
+              <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-[#0D121F] border border-[#1E293B] rounded-2xl shadow-2xl py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
                 <div className="px-4 py-2.5 border-b border-[#1E293B] flex items-center justify-between bg-[#0B0F17]">
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-bold text-slate-100">

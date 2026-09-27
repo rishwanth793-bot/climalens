@@ -148,11 +148,11 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
     return (
       <button
         onClick={() => setChatOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-emerald-500 to-teal-700 text-slate-900 p-3.5 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 cursor-pointer border border-emerald-400/40"
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-emerald-500 to-teal-700 text-white p-3.5 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 cursor-pointer border border-emerald-400/40"
         title="Open ClimateLens AI Assistant"
       >
-        <Sparkles className="w-5 h-5 text-slate-900" />
-        <span className="text-xs font-bold pr-1 font-industrial text-slate-900">ClimateLens AI</span>
+        <Sparkles className="w-5 h-5 text-white" />
+        <span className="text-xs font-bold pr-1 font-industrial text-white">ClimateLens AI</span>
       </button>
     );
   }
@@ -181,7 +181,7 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
         <div className="flex items-center gap-1.5 shrink-0 ml-2">
           <button
             onClick={handleResetChat}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-[#131B2E] transition-colors cursor-pointer"
+            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-[#0D121F] transition-colors cursor-pointer"
             title="Reset Chat History"
             aria-label="Reset Chat"
           >
@@ -189,7 +189,7 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
           </button>
           <button
             onClick={() => setChatOpen(false)}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#131B2E] hover:bg-[#1E293B] text-slate-300 hover:text-white font-medium text-xs transition-all cursor-pointer border border-[#1E293B]"
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#0D121F] hover:bg-[#1E293B] text-slate-300 hover:text-white font-medium text-xs transition-all cursor-pointer border border-[#1E293B]"
             title="Close Assistant Window (Esc)"
             aria-label="Close Assistant Window"
           >
@@ -231,7 +231,7 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
               className={`p-3.5 rounded-2xl max-w-[90%] leading-relaxed ${
                 msg.role === 'user'
                   ? 'bg-emerald-500/20 text-emerald-100 rounded-br-xs border border-emerald-500/30'
-                  : 'bg-[#131B2E] text-slate-200 rounded-bl-xs border border-[#1E293B] shadow-sm'
+                  : 'bg-[#0D121F] text-slate-200 rounded-bl-xs border border-[#1E293B] shadow-sm'
               }`}
             >
               <div className="whitespace-pre-wrap">{msg.content}</div>
@@ -278,7 +278,7 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
         ))}
 
         {isLoading && (
-          <div className="flex items-center gap-2 p-3 bg-[#131B2E] rounded-xl border border-[#1E293B] text-slate-400 text-xs w-fit">
+          <div className="flex items-center gap-2 p-3 bg-[#0D121F] rounded-xl border border-[#1E293B] text-slate-400 text-xs w-fit">
             <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
             <span>Consulting environmental standards &amp; searching CPCB / GHG Protocol guidance...</span>
           </div>
@@ -289,14 +289,14 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
 
       {/* Suggested Quick Prompts */}
       <div className="bg-[#0D121F] border-t border-[#1E293B] px-3 py-2 overflow-x-auto flex items-center gap-1.5 scrollbar-none">
-        <span className="text-[10px] font-mono uppercase text-slate-500 font-semibold shrink-0">
+        <span className="text-[10px] font-mono uppercase text-slate-400 font-semibold shrink-0">
           Prompts:
         </span>
         {quickPrompts.map((qp, idx) => (
           <button
             key={idx}
             onClick={() => handleSendMessage(qp)}
-            className="text-[11px] whitespace-nowrap px-2.5 py-1 rounded-full bg-[#131B2E] hover:bg-[#1E293B] text-slate-300 transition-colors cursor-pointer shrink-0 border border-[#1E293B]"
+            className="text-[11px] whitespace-nowrap px-2.5 py-1 rounded-full bg-[#0D121F] hover:bg-[#1E293B] text-slate-300 transition-colors cursor-pointer shrink-0 border border-[#1E293B]"
           >
             {qp.length > 35 ? qp.substring(0, 35) + '...' : qp}
           </button>
@@ -317,18 +317,18 @@ export const GeminiRegulatoryAssistant: React.FC = () => {
             value={inputPrompt}
             onChange={(e) => setInputPrompt(e.target.value)}
             placeholder="Ask about emissions, CPCB standards, water balances..."
-            className="flex-1 px-3 py-2 rounded-xl bg-[#131B2E] border border-[#1E293B] text-xs text-slate-100 placeholder:text-slate-500 focus:outline-hidden focus:border-emerald-500 font-medium"
+            className="flex-1 px-3 py-2 rounded-xl bg-[#0D121F] border border-[#1E293B] text-xs text-slate-100 placeholder:text-slate-400 focus:outline-hidden focus:border-emerald-500 font-medium"
           />
           <button
             type="submit"
             disabled={!inputPrompt.trim() || isLoading}
-            className="p-2 bg-emerald-400 hover:bg-emerald-300 disabled:opacity-40 text-slate-900 rounded-xl transition-colors cursor-pointer font-bold"
+            className="p-2 bg-emerald-400 hover:bg-emerald-300 disabled:opacity-40 text-white rounded-xl transition-colors cursor-pointer font-bold"
             title="Send Message"
           >
-            <Send className="w-4 h-4 text-slate-900" />
+            <Send className="w-4 h-4 text-white" />
           </button>
         </form>
-        <div className="flex items-center justify-between text-[10px] text-slate-500 mt-2 px-1">
+        <div className="flex items-center justify-between text-[10px] text-slate-400 mt-2 px-1">
           <span>Press Enter to send</span>
           <button
             type="button"

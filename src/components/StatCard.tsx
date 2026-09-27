@@ -100,9 +100,9 @@ const CustomSparklineTooltip: React.FC<CustomTooltipProps> = ({ active, payload,
   if (active && payload && payload.length) {
     const item = payload[0].payload;
     return (
-      <div className="bg-white/95 backdrop-blur-xs border border-slate-200 px-2 py-1 rounded-md shadow-md text-left pointer-events-none z-50">
-        <div className="text-[10px] font-mono text-slate-500 font-medium">{item.period}</div>
-        <div className="text-xs font-mono font-bold text-slate-900">
+      <div className="bg-white/95 backdrop-blur-xs border border-[#1E293B] px-2 py-1 rounded-md shadow-xl text-left pointer-events-none z-50">
+        <div className="text-[10px] font-mono text-slate-400 font-medium">{item.period}</div>
+        <div className="text-xs font-mono font-bold text-white">
           {typeof item.value === 'number' ? item.value.toLocaleString() : item.value}
           {unit ? ` ${unit}` : ''}
         </div>
@@ -214,7 +214,7 @@ export const StatCard: React.FC<StatCardProps> = ({
 
       {/* Recharts 4-Period Sparkline Visual */}
       <div className="mt-3 pt-2 border-t border-[#1E293B]">
-        <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 mb-1">
+        <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-1">
           <span className="tracking-wider uppercase font-semibold">4 Reporting Periods</span>
           <span className="text-slate-400 font-bold font-mono">
             {chartData[0]?.period} → {chartData[chartData.length - 1]?.period}
@@ -256,8 +256,8 @@ export const StatCard: React.FC<StatCardProps> = ({
                 key={i}
                 className={`py-0.5 px-0.5 rounded transition-colors ${
                   isCurrent
-                    ? 'bg-[#131B2E] text-emerald-300 font-bold border border-emerald-500/30'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-[#0D121F] text-emerald-300 font-bold border border-emerald-500/30'
+                    : 'text-slate-400 hover:text-slate-300'
                 }`}
                 title={`${pt.period}: ${pt.value.toLocaleString()}${unit ? ` ${unit}` : ''}`}
               >

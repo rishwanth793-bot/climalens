@@ -89,7 +89,7 @@ export const RawDataPage: React.FC = () => {
               <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 px-2.5 py-0.5 rounded border border-amber-800/80">
                 Intentionally Dense Area · Raw Report Intake
               </span>
-              <span className="text-slate-500 font-mono text-xs">•</span>
+              <span className="text-slate-400 font-mono text-xs">•</span>
               <span className="text-[10px] font-mono font-semibold text-slate-400 uppercase tracking-wider">
                 SAMPLE REPORT / DEMO DATA (FICTIONAL FACILITY)
               </span>
@@ -153,25 +153,25 @@ export const RawDataPage: React.FC = () => {
         {/* 4-Item Dense Summary Bar */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-5 border-t border-[#1E293B]">
           <div className="p-3 rounded-xl bg-[#0B0F17]/70 border border-[#1E293B]/90">
-            <span className="text-[10px] font-mono uppercase text-slate-500 block">Source Report Size</span>
+            <span className="text-[10px] font-mono uppercase text-slate-400 block">Source Report Size</span>
             <span className="text-xl font-bold font-mono text-white mt-0.5 block">184 Pages</span>
             <span className="text-[10px] text-slate-400 font-mono">Integrated ESG Filing (PDF)</span>
           </div>
 
           <div className="p-3 rounded-xl bg-[#0B0F17]/70 border border-[#1E293B]/90">
-            <span className="text-[10px] font-mono uppercase text-slate-500 block">Total Data Points</span>
+            <span className="text-[10px] font-mono uppercase text-slate-400 block">Total Data Points</span>
             <span className="text-xl font-bold font-mono text-sky-400 mt-0.5 block">1,248 Data Points</span>
             <span className="text-[10px] text-slate-400 font-mono">Narratives, Footnotes, Logs</span>
           </div>
 
           <div className="p-3 rounded-xl bg-[#0B0F17]/70 border border-[#1E293B]/90">
-            <span className="text-[10px] font-mono uppercase text-slate-500 block">Extracted Tables</span>
+            <span className="text-[10px] font-mono uppercase text-slate-400 block">Extracted Tables</span>
             <span className="text-xl font-bold font-mono text-amber-400 mt-0.5 block">37 Tables</span>
             <span className="text-[10px] text-slate-400 font-mono">Unstructured Tabular Layouts</span>
           </div>
 
           <div className="p-3 rounded-xl bg-[#0B0F17]/70 border border-[#1E293B]/90">
-            <span className="text-[10px] font-mono uppercase text-slate-500 block">Environmental Values</span>
+            <span className="text-[10px] font-mono uppercase text-slate-400 block">Environmental Values</span>
             <span className="text-xl font-bold font-mono text-emerald-400 mt-0.5 block">96 Disclosures</span>
             <span className="text-[10px] text-slate-400 font-mono">Energy, Water, GHG, Waste</span>
           </div>
@@ -217,7 +217,7 @@ export const RawDataPage: React.FC = () => {
             <div className="p-4 rounded-2xl bg-[#111726] border border-[#1E293B] space-y-3">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <div className="relative flex-1">
-                  <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     value={searchQuery}
@@ -246,7 +246,7 @@ export const RawDataPage: React.FC = () => {
               {/* Informative Note about Raw Complexity */}
               <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-[#1E293B]">
                 <span className="flex items-center gap-1.5 font-mono">
-                  <Hash className="w-3 h-3 text-slate-500" />
+                  <Hash className="w-3 h-3 text-slate-400" />
                   Showing {filteredMetrics.length} unstandardized data points from Tables 1.1 through 7.2
                 </span>
                 <span className="text-amber-400 font-mono text-[10px]">
@@ -261,7 +261,7 @@ export const RawDataPage: React.FC = () => {
                 <div className="font-bold text-slate-300 font-mono text-[11px] uppercase tracking-wider">
                   Raw Environmental Disclosures Matrix (Unfiltered)
                 </div>
-                <div className="text-[10px] font-mono text-slate-500">
+                <div className="text-[10px] font-mono text-slate-400">
                   Includes ambiguous units &amp; boundary notes
                 </div>
               </div>
@@ -311,7 +311,7 @@ export const RawDataPage: React.FC = () => {
                               {metric.unit}
                             </span>
                           </div>
-                          <div className="text-[10px] font-mono text-slate-500 mt-0.5">
+                          <div className="text-[10px] font-mono text-slate-400 mt-0.5">
                             Conf: <strong className={metric.confidenceScore >= 90 ? 'text-emerald-400' : 'text-amber-400'}>{metric.confidenceScore}%</strong>
                           </div>
                         </div>
@@ -319,9 +319,9 @@ export const RawDataPage: React.FC = () => {
 
                       {/* Dense Raw Excerpt with Footnotes & Boundary Scope */}
                       <div className="p-2.5 rounded-xl bg-[#0B0F17] border border-[#1E293B] text-[11px] font-mono text-slate-300 leading-relaxed">
-                        <span className="text-slate-500 select-none">&ldquo;</span>
+                        <span className="text-slate-400 select-none">&ldquo;</span>
                         {metric.sourceSnippet}
-                        <span className="text-slate-500 select-none">&rdquo;</span>
+                        <span className="text-slate-400 select-none">&rdquo;</span>
                       </div>
 
                       {/* Technical Footnote / Ambiguity Warning if present */}
@@ -337,7 +337,7 @@ export const RawDataPage: React.FC = () => {
 
                       {/* Actions */}
                       <div className="flex items-center justify-between pt-1 text-[11px]">
-                        <span className="text-slate-500 font-mono text-[10px]">
+                        <span className="text-slate-400 font-mono text-[10px]">
                           Period: {metric.reportingPeriod}
                         </span>
                         <div className="flex items-center gap-2">
@@ -376,7 +376,7 @@ export const RawDataPage: React.FC = () => {
                 <span className="font-bold text-slate-300 uppercase tracking-wider font-mono text-[10px]">
                   Disclosed Reporting Caveats &amp; Footnotes (Dispersed Across Pages)
                 </span>
-                <span className="text-[10px] font-mono text-slate-500">3 Footnotes</span>
+                <span className="text-[10px] font-mono text-slate-400">3 Footnotes</span>
               </div>
 
               <div className="space-y-2 text-xs">

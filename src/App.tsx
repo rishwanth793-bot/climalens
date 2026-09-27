@@ -97,7 +97,7 @@ const MainLayout: React.FC = () => {
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 animate-in fade-in slide-in-from-bottom-3 duration-200">
-          <div className="bg-[#131B2E] text-slate-100 text-xs font-medium px-4 py-3 rounded-xl border border-[#1E293B] shadow-2xl flex items-center gap-2.5">
+          <div className="bg-[#0D121F] text-slate-100 text-xs font-medium px-4 py-3 rounded-xl border border-[#1E293B] shadow-2xl flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>{toastMessage}</span>
           </div>

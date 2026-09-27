@@ -30,11 +30,11 @@ export const ReportHistoryPage: React.FC = () => {
       case 'Requires Review':
         return 'bg-rose-50 text-rose-800 border-rose-200';
       case 'Completed':
-        return 'bg-slate-100 text-slate-700 border-slate-200';
+        return 'bg-slate-100 text-slate-200 border-[#1E293B]';
       case 'Processing':
         return 'bg-sky-50 text-sky-800 border-sky-200 animate-pulse';
       default:
-        return 'bg-slate-100 text-slate-700 border-slate-200';
+        return 'bg-slate-100 text-slate-200 border-[#1E293B]';
     }
   };
 
@@ -48,10 +48,10 @@ export const ReportHistoryPage: React.FC = () => {
               Document Archive & Sub-Units
             </span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
             Corporate & Unit Report History
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+          <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
             Audit trail of ingested sustainability reports, unit environmental sub-disclosures, and historical comparisons.
           </p>
         </div>
@@ -66,14 +66,14 @@ export const ReportHistoryPage: React.FC = () => {
       </div>
 
       {/* Visual Sub-Unit Processing Banner */}
-      <div className="bg-gradient-to-r from-emerald-50 via-white to-sky-50 border border-slate-200/80 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-emerald-50 via-white to-sky-50 border border-[#1E293B]/80 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-xs shrink-0 overflow-hidden">
+          <div className="w-12 h-12 rounded-xl bg-white border border-[#1E293B] flex items-center justify-center shadow-xs shrink-0 overflow-hidden">
             <img src={VISUAL_ASSETS.dataAnalytics} alt="Analytics" className="w-full h-full object-cover" />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-slate-900">Multi-Unit Report Harmonization</h4>
-            <p className="text-xs text-slate-500">
+            <h4 className="text-sm font-bold text-white">Multi-Unit Report Harmonization</h4>
+            <p className="text-xs text-slate-400">
               ClimateLens automatically aggregates separate unit disclosures (Kiln operations, Clinker cooling, and captive solar) into a unified enterprise ESG profile.
             </p>
           </div>
@@ -84,10 +84,10 @@ export const ReportHistoryPage: React.FC = () => {
       </div>
 
       {/* Table Card */}
-      <div className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-xs">
+      <div className="bg-white border border-[#1E293B]/80 rounded-2xl overflow-hidden shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50/80 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider text-[11px]">
+            <thead className="bg-slate-50/80 border-b border-[#1E293B] text-slate-300 font-semibold uppercase tracking-wider text-[11px]">
               <tr>
                 <th className="py-3 px-4">Report & Document Name</th>
                 <th className="py-3 px-3">Organization</th>
@@ -109,16 +109,16 @@ export const ReportHistoryPage: React.FC = () => {
                         <FileText className="w-4 h-4 text-emerald-600" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-900">{report.title}</div>
+                        <div className="font-semibold text-white">{report.title}</div>
                         <div className="text-[11px] text-slate-400 font-mono">{report.fileName}</div>
                       </div>
                     </div>
                   </td>
-                  <td className="py-3.5 px-3 text-slate-700 font-medium">{report.companyName}</td>
-                  <td className="py-3.5 px-3 text-slate-600">{report.facilityName}</td>
-                  <td className="py-3.5 px-3 text-slate-600 font-mono">{report.reportingPeriod}</td>
-                  <td className="py-3.5 px-3 text-slate-500">{report.uploadedAt}</td>
-                  <td className="py-3.5 px-3 text-center font-mono font-semibold text-slate-800">
+                  <td className="py-3.5 px-3 text-slate-200 font-medium">{report.companyName}</td>
+                  <td className="py-3.5 px-3 text-slate-300">{report.facilityName}</td>
+                  <td className="py-3.5 px-3 text-slate-300 font-mono">{report.reportingPeriod}</td>
+                  <td className="py-3.5 px-3 text-slate-400">{report.uploadedAt}</td>
+                  <td className="py-3.5 px-3 text-center font-mono font-semibold text-slate-100">
                     {report.detectedMetricsCount}
                   </td>
                   <td className="py-3.5 px-3 text-center">
@@ -158,7 +158,7 @@ export const ReportHistoryPage: React.FC = () => {
                           setActiveView('extraction');
                           showToast(`Loaded ${report.title} extracted data.`);
                         }}
-                        className="p-1.5 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-md transition-colors cursor-pointer"
+                        className="p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-100 rounded-md transition-colors cursor-pointer"
                         title="View Extracted Metrics"
                       >
                         <ExternalLink className="w-4 h-4" />
@@ -168,7 +168,7 @@ export const ReportHistoryPage: React.FC = () => {
                           setActiveView('final-report');
                           showToast(`Opened verification audit for ${report.title}.`);
                         }}
-                        className="px-2.5 py-1 text-xs font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg transition-colors cursor-pointer"
+                        className="px-2.5 py-1 text-xs font-semibold text-slate-200 bg-slate-50 hover:bg-slate-100 border border-[#1E293B] rounded-lg transition-colors cursor-pointer"
                       >
                         Audit Dossier
                       </button>

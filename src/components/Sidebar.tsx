@@ -53,7 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, setIsOpenMobile 
     } ${
       active
         ? 'bg-emerald-500/10 text-emerald-300 font-semibold border border-emerald-500/30 shadow-xs'
-        : 'text-slate-400 hover:text-slate-100 hover:bg-[#131B2E]'
+        : 'text-slate-400 hover:text-slate-100 hover:bg-[#0D121F]'
     }`;
   };
 
@@ -75,7 +75,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, setIsOpenMobile 
         {/* Brand Lockup */}
         <div className="p-5 border-b border-[#1E293B] flex items-center justify-between bg-[#0B0F17]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-lg shadow-emerald-900/30 ring-1 ring-emerald-400/40">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-2xl shadow-emerald-900/30 ring-1 ring-emerald-400/40">
               <Globe2 className="w-5 h-5" />
             </div>
             <div>
@@ -271,7 +271,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, setIsOpenMobile 
 
         {/* Facility & Lead Verifier Card */}
         <div className="p-3.5 border-t border-[#1E293B] bg-[#0B0F17]">
-          <div className="p-3 rounded-xl bg-[#131B2E] border border-[#1E293B] flex items-center gap-2.5">
+          <div className="p-3 rounded-xl bg-[#0D121F] border border-[#1E293B] flex items-center gap-2.5">
             <img
               src={VISUAL_ASSETS.facilityHero}
               alt={facilityProfile.facilityName}

@@ -77,7 +77,7 @@ export const HistoricalAnalysisPage: React.FC = () => {
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-16">
       {/* Visual Header Banner */}
-      <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xs bg-slate-900 text-white min-h-[140px] flex flex-col justify-end p-6 sm:p-8">
+      <div className="relative rounded-2xl overflow-hidden border border-[#1E293B] shadow-xs bg-slate-900 text-white min-h-[140px] flex flex-col justify-end p-6 sm:p-8">
         <img
           src={VISUAL_ASSETS.facilityCampus}
           alt="Modern Sustainable Campus"
@@ -101,7 +101,7 @@ export const HistoricalAnalysisPage: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => triggerContextualPdfView(null, currentConfig.sourcePage)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-white hover:bg-slate-100 transition-colors shadow-xs cursor-pointer"
             >
               <Eye className="w-3.5 h-3.5 text-sky-600" />
               <span>Inspect Source PDF (p.{currentConfig.sourcePage})</span>
@@ -118,9 +118,9 @@ export const HistoricalAnalysisPage: React.FC = () => {
       </div>
 
       {/* Filters Strip */}
-      <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-wrap items-center justify-between gap-4">
+      <div className="p-5 rounded-2xl bg-white border border-[#1E293B] shadow-xs flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-bold text-slate-500 uppercase tracking-wider mr-1">
+          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1">
             Metric:
           </span>
           {Object.entries(metricConfigs).map(([key, cfg]) => (
@@ -130,7 +130,7 @@ export const HistoricalAnalysisPage: React.FC = () => {
               className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 selectedMetric === key
                   ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-slate-50 text-slate-600 hover:text-slate-900 border border-slate-200'
+                  : 'bg-slate-50 text-slate-300 hover:text-white border border-[#1E293B]'
               }`}
             >
               {cfg.label.split(' ')[0]} {cfg.label.split(' ')[1] || ''}
@@ -150,13 +150,13 @@ export const HistoricalAnalysisPage: React.FC = () => {
       {/* Main Grid: Chart & Trend Analysis on Left, Hypothesis Card on Right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left: Trend Chart & Data Table */}
-        <div className="lg:col-span-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-6">
+        <div className="lg:col-span-8 p-6 rounded-2xl bg-white border border-[#1E293B] shadow-xs space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
               <span className="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                 {currentConfig.category} Indicator
               </span>
-              <h2 className="text-base font-bold text-slate-900 mt-1">
+              <h2 className="text-base font-bold text-white mt-1">
                 {currentConfig.label}
               </h2>
             </div>
@@ -166,11 +166,11 @@ export const HistoricalAnalysisPage: React.FC = () => {
                 <span className="text-[10px] uppercase font-bold text-slate-400 block">
                   Latest (FY 2025–26)
                 </span>
-                <span className="text-xl font-extrabold font-mono text-slate-900">
+                <span className="text-xl font-extrabold font-mono text-white">
                   {currentVal.toLocaleString()} {currentConfig.unit}
                 </span>
               </div>
-              <div className="text-right border-l border-slate-200 pl-3">
+              <div className="text-right border-l border-[#1E293B] pl-3">
                 <span className="text-[10px] uppercase font-bold text-slate-400 block">
                   YoY Shift
                 </span>
@@ -289,7 +289,7 @@ export const HistoricalAnalysisPage: React.FC = () => {
           <div className="overflow-x-auto pt-2">
             <table className="w-full text-left text-xs border-collapse font-mono">
               <thead>
-                <tr className="border-b border-slate-200 bg-slate-50 text-slate-500 uppercase tracking-wider text-[10px] font-bold">
+                <tr className="border-b border-[#1E293B] bg-slate-50 text-slate-400 uppercase tracking-wider text-[10px] font-bold">
                   <th className="py-2.5 px-3.5 font-sans">Period</th>
                   <th className="py-2.5 px-3.5 text-right">Reported Value</th>
                   <th className="py-2.5 px-3.5 text-right">YoY Shift</th>
@@ -306,7 +306,7 @@ export const HistoricalAnalysisPage: React.FC = () => {
 
                   return (
                     <tr key={d.period} className="hover:bg-slate-50/70">
-                      <td className="py-2.5 px-3.5 font-bold text-slate-900 font-sans">
+                      <td className="py-2.5 px-3.5 font-bold text-white font-sans">
                         {d.period}
                       </td>
                       <td className="py-2.5 px-3.5 text-right font-extrabold text-emerald-700">
@@ -325,10 +325,10 @@ export const HistoricalAnalysisPage: React.FC = () => {
                           {Number(diff) > 0 ? `+${diff}%` : diff === '—' ? 'Baseline' : `${diff}%`}
                         </span>
                       </td>
-                      <td className="py-2.5 px-3.5 text-right text-slate-600">
+                      <td className="py-2.5 px-3.5 text-right text-slate-300">
                         {d.productionTonnes.toLocaleString()}
                       </td>
-                      <td className="py-2.5 px-3.5 text-right font-bold text-slate-900">
+                      <td className="py-2.5 px-3.5 text-right font-bold text-white">
                         {d.carbonIntensity}
                       </td>
                       <td className="py-2.5 px-3.5 text-right">
@@ -349,23 +349,23 @@ export const HistoricalAnalysisPage: React.FC = () => {
         </div>
 
         {/* Right: Variance Hypotheses Panel */}
-        <div className="lg:col-span-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-4">
+        <div className="lg:col-span-4 p-6 rounded-2xl bg-white border border-[#1E293B] shadow-xs space-y-4">
           <div className="border-b border-slate-100 pb-3">
             <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
               Audit Scrutiny Protocol
             </span>
-            <h3 className="text-sm font-bold text-slate-900 mt-2">
+            <h3 className="text-sm font-bold text-white mt-2">
               Historical Variance Factor Review
             </h3>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-slate-50 border border-[#1E293B] text-xs text-slate-200 leading-relaxed">
             &ldquo;Scope 1 direct emissions show a +22.0% increase in FY 2025–26 compared with the previous reporting period. This variance warrants investigation because finished product dispatch increased by only 6.33% over the same duration.&rdquo;
           </div>
 
           {/* 5 Factors to review */}
           <div className="space-y-2">
-            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               5 Factors Recommended for Human Verification:
             </span>
 
@@ -407,8 +407,8 @@ export const HistoricalAnalysisPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-500">
-            <span className="font-bold text-slate-900 block mb-0.5">Ethical Guardrail:</span>
+          <div className="p-3 rounded-xl bg-slate-50 border border-[#1E293B] text-[11px] text-slate-400">
+            <span className="font-bold text-white block mb-0.5">Ethical Guardrail:</span>
             ClimateLens does not assign blame or declare data falsification. The final determination belongs solely to Lead Verifier {settings.reviewerName}.
           </div>
         </div>

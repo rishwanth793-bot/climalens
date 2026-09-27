@@ -43,7 +43,7 @@ export const ContextualPDFModal: React.FC = () => {
                 <h3 className="text-sm font-bold text-slate-100 tracking-tight">
                   Contextual Source Document Traceability
                 </h3>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#131B2E] text-emerald-300 border border-emerald-500/30">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0D121F] text-emerald-300 border border-emerald-500/30">
                   Page {activePdfPage} of 28
                 </span>
               </div>
@@ -67,7 +67,7 @@ export const ContextualPDFModal: React.FC = () => {
             </button>
             <button
               onClick={() => setIsPdfModalOpen(false)}
-              className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-[#131B2E] transition-colors cursor-pointer"
+              className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-[#0D121F] transition-colors cursor-pointer"
               aria-label="Close Modal"
             >
               <X className="w-5 h-5" />
@@ -103,7 +103,7 @@ export const ContextualPDFModal: React.FC = () => {
             {pdfHighlightedMetric ? (
               <>
                 {/* Metric Value & Confidence Pill */}
-                <div className="p-4 rounded-xl bg-[#131B2E] border border-[#1E293B] space-y-2">
+                <div className="p-4 rounded-xl bg-[#0D121F] border border-[#1E293B] space-y-2">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-slate-400 font-medium">Disclosed Value:</span>
                     <span className="font-mono text-base font-bold text-emerald-400">
@@ -144,13 +144,13 @@ export const ContextualPDFModal: React.FC = () => {
                       {pdfHighlightedMetric.tableReference || `Page ${pdfHighlightedMetric.sourcePage}`}
                     </span>
                   </div>
-                  <div className="p-3 bg-[#131B2E] rounded-xl border border-[#1E293B] text-xs text-slate-300 font-mono italic leading-relaxed">
+                  <div className="p-3 bg-[#0D121F] rounded-xl border border-[#1E293B] text-xs text-slate-300 font-mono italic leading-relaxed">
                     &ldquo;{pdfHighlightedMetric.sourceSnippet}&rdquo;
                   </div>
                 </div>
 
                 {/* Section & Audit Reason */}
-                <div className="p-3 bg-[#131B2E] rounded-xl border border-[#1E293B] text-xs space-y-1">
+                <div className="p-3 bg-[#0D121F] rounded-xl border border-[#1E293B] text-xs space-y-1">
                   <div className="font-semibold text-slate-200">Section Reference:</div>
                   <div className="text-slate-400 font-mono text-[11px]">
                     {pdfHighlightedMetric.sourceSection}
@@ -174,7 +174,7 @@ export const ContextualPDFModal: React.FC = () => {
                         verifyMetric(pdfHighlightedMetric.id);
                         setIsPdfModalOpen(false);
                       }}
-                      className="py-2 px-3 rounded-xl bg-emerald-400 hover:bg-emerald-300 text-slate-900 text-xs font-bold transition-colors shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="py-2 px-3 rounded-xl bg-emerald-400 hover:bg-emerald-300 text-white text-xs font-bold transition-colors shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       <Check className="w-3.5 h-3.5" />
                       <span>Verify Metric</span>
@@ -197,7 +197,7 @@ export const ContextualPDFModal: React.FC = () => {
                       setAdjustingMetric(pdfHighlightedMetric);
                       setIsPdfModalOpen(false);
                     }}
-                    className="w-full py-2 px-3 rounded-xl bg-[#131B2E] hover:bg-[#1E293B] text-slate-200 border border-[#1E293B] text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full py-2 px-3 rounded-xl bg-[#0D121F] hover:bg-[#1E293B] text-slate-200 border border-[#1E293B] text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Edit3 className="w-3.5 h-3.5 text-sky-400" />
                     <span>Adjust Reported Value</span>
@@ -206,11 +206,11 @@ export const ContextualPDFModal: React.FC = () => {
               </>
             ) : (
               <div className="text-center py-12 space-y-3 text-xs text-slate-400">
-                <FileText className="w-10 h-10 text-slate-500 mx-auto" />
+                <FileText className="w-10 h-10 text-slate-400 mx-auto" />
                 <p>
                   Use the page controls above to inspect any page of the disclosure report.
                 </p>
-                <div className="p-3 bg-[#131B2E] rounded-xl text-slate-300 border border-[#1E293B]">
+                <div className="p-3 bg-[#0D121F] rounded-xl text-slate-300 border border-[#1E293B]">
                   Select any metric from the Clean Data or Verification Center pages to jump directly to its verified citation.
                 </div>
               </div>

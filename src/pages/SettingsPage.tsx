@@ -69,7 +69,7 @@ export const SettingsPage: React.FC = () => {
                 type="text"
                 value={reviewerName}
                 onChange={(e) => setReviewerName(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl bg-[#131B2E] border border-[#1E293B] text-slate-100 focus:outline-hidden focus:border-emerald-500 text-xs font-medium"
+                className="w-full px-3 py-2 rounded-xl bg-[#0D121F] border border-[#1E293B] text-slate-100 focus:outline-hidden focus:border-emerald-500 text-xs font-medium"
               />
             </div>
 
@@ -81,7 +81,7 @@ export const SettingsPage: React.FC = () => {
                 type="text"
                 value={reviewerRole}
                 onChange={(e) => setReviewerRole(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl bg-[#131B2E] border border-[#1E293B] text-slate-100 focus:outline-hidden focus:border-emerald-500 text-xs font-medium"
+                className="w-full px-3 py-2 rounded-xl bg-[#0D121F] border border-[#1E293B] text-slate-100 focus:outline-hidden focus:border-emerald-500 text-xs font-medium"
               />
             </div>
 
@@ -93,7 +93,7 @@ export const SettingsPage: React.FC = () => {
                 type="text"
                 defaultValue={settings.regionalAgency}
                 disabled
-                className="w-full px-3 py-2 rounded-xl bg-[#0B0F17] border border-[#1E293B] text-slate-500 text-xs cursor-not-allowed"
+                className="w-full px-3 py-2 rounded-xl bg-[#0B0F17] border border-[#1E293B] text-slate-400 text-xs cursor-not-allowed"
               />
             </div>
 
@@ -105,7 +105,7 @@ export const SettingsPage: React.FC = () => {
                 type="text"
                 defaultValue="ISO 14064-3 / ISAE 3410"
                 disabled
-                className="w-full px-3 py-2 rounded-xl bg-[#0B0F17] border border-[#1E293B] text-slate-500 text-xs cursor-not-allowed"
+                className="w-full px-3 py-2 rounded-xl bg-[#0B0F17] border border-[#1E293B] text-slate-400 text-xs cursor-not-allowed"
               />
             </div>
           </div>
@@ -140,9 +140,9 @@ export const SettingsPage: React.FC = () => {
               step="1"
               value={threshold}
               onChange={(e) => setThreshold(Number(e.target.value))}
-              className="w-full accent-emerald-500 bg-[#131B2E] h-2 rounded-lg cursor-pointer"
+              className="w-full accent-emerald-500 bg-[#0D121F] h-2 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[11px] text-slate-500 font-mono">
+            <div className="flex justify-between text-[11px] text-slate-400 font-mono">
               <span>70% (Tolerant)</span>
               <span>85% (Recommended)</span>
               <span>95% (Strict Audit)</span>
@@ -166,11 +166,11 @@ export const SettingsPage: React.FC = () => {
                   className={`py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
                     sensitivity === level
                       ? 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300 shadow-xs'
-                      : 'bg-[#131B2E] border-[#1E293B] text-slate-400 hover:text-slate-200'
+                      : 'bg-[#0D121F] border-[#1E293B] text-slate-400 hover:text-slate-200'
                   }`}
                 >
                   <div className="font-bold">{level} Sensitivity</div>
-                  <div className="text-[10px] font-normal text-slate-500 mt-0.5">
+                  <div className="text-[10px] font-normal text-slate-400 mt-0.5">
                     {level === 'Low' && '±25% threshold'}
                     {level === 'Medium' && '±15% (Default)'}
                     {level === 'High' && '±5% strict tolerance'}
@@ -187,7 +187,7 @@ export const SettingsPage: React.FC = () => {
                 type="checkbox"
                 checked={contextComparison}
                 onChange={(e) => setContextComparison(e.target.checked)}
-                className="mt-0.5 w-4 h-4 rounded text-emerald-500 border-[#1E293B] bg-[#131B2E] focus:ring-emerald-500 cursor-pointer"
+                className="mt-0.5 w-4 h-4 rounded text-emerald-500 border-[#1E293B] bg-[#0D121F] focus:ring-emerald-500 cursor-pointer"
               />
               <div>
                 <span className="text-xs font-semibold text-slate-200">
@@ -211,7 +211,7 @@ export const SettingsPage: React.FC = () => {
           </div>
 
           <div className="space-y-2 text-xs">
-            <div className="flex items-center justify-between p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="flex items-center justify-between p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <div className="flex items-center gap-2.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                 <div>
@@ -226,7 +226,7 @@ export const SettingsPage: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex items-center justify-between p-3 rounded-xl bg-[#131B2E] border border-[#1E293B]">
+            <div className="flex items-center justify-between p-3 rounded-xl bg-[#0D121F] border border-[#1E293B]">
               <div className="flex items-center gap-2.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                 <div>
@@ -248,7 +248,7 @@ export const SettingsPage: React.FC = () => {
           <button
             type="button"
             onClick={resetToDemoData}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 bg-[#131B2E] hover:bg-[#1E293B] border border-[#1E293B] shadow-sm transition-colors cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 bg-[#0D121F] hover:bg-[#1E293B] border border-[#1E293B] shadow-sm transition-colors cursor-pointer"
           >
             <RotateCcw className="w-4 h-4 text-slate-400" />
             <span>Reset Demo Data &amp; Flags</span>
@@ -256,9 +256,9 @@ export const SettingsPage: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-slate-900 bg-emerald-400 hover:bg-emerald-300 shadow-sm transition-colors cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-400 hover:bg-emerald-300 shadow-sm transition-colors cursor-pointer"
           >
-            <Check className="w-4 h-4 text-slate-900" />
+            <Check className="w-4 h-4 text-white" />
             <span>Save Verification Settings</span>
           </button>
         </div>

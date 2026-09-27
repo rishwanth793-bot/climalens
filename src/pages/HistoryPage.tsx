@@ -194,7 +194,7 @@ export const HistoryPage: React.FC = () => {
           {/* Metric Switcher Pills */}
           <div className="p-4 rounded-2xl bg-[#111726] border border-[#1E293B] flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-1.5 text-xs">
-              <span className="text-[10px] font-mono uppercase text-slate-500 mr-1">Select Metric:</span>
+              <span className="text-[10px] font-mono uppercase text-slate-400 mr-1">Select Metric:</span>
               {Object.entries(metricConfigs).map(([key, cfg]) => (
                 <button
                   key={key}
@@ -227,7 +227,7 @@ export const HistoryPage: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/80 uppercase">
                     {currentConfig.category} Trajectory
                   </span>
-                  <span className="text-xs text-slate-500 font-mono">2023 → 2024 → 2025 → 2026</span>
+                  <span className="text-xs text-slate-400 font-mono">2023 → 2024 → 2025 → 2026</span>
                 </div>
                 <h2 className="text-xl font-bold text-white mt-1">
                   {currentConfig.label}
@@ -236,7 +236,7 @@ export const HistoryPage: React.FC = () => {
 
               <div className="flex items-center gap-4">
                 <div className="text-right">
-                  <span className="text-[10px] uppercase font-mono text-slate-500 block">
+                  <span className="text-[10px] uppercase font-mono text-slate-400 block">
                     FY 2025–26 Disclosed
                   </span>
                   <span className="text-2xl font-bold font-mono text-white">
@@ -244,7 +244,7 @@ export const HistoryPage: React.FC = () => {
                   </span>
                 </div>
                 <div className="text-right border-l border-[#1E293B] pl-4">
-                  <span className="text-[10px] uppercase font-mono text-slate-500 block">
+                  <span className="text-[10px] uppercase font-mono text-slate-400 block">
                     Period Shift
                   </span>
                   <span
@@ -368,7 +368,7 @@ export const HistoryPage: React.FC = () => {
                 <p className="text-xs text-slate-300 leading-relaxed font-sans">
                   {currentConfig.explanation}
                 </p>
-                <div className="text-[11px] text-slate-500 font-mono pt-1">
+                <div className="text-[11px] text-slate-400 font-mono pt-1">
                   Note: Historical increases or decreases do not automatically indicate misreporting.
                 </div>
               </div>
@@ -437,7 +437,7 @@ export const HistoryPage: React.FC = () => {
                     <tr key={report.id} className="hover:bg-[#151D2F] transition-colors">
                       <td className="py-3.5 px-5">
                         <div className="font-semibold text-white">{report.title}</div>
-                        <div className="text-[11px] text-slate-500 font-mono">{report.fileName}</div>
+                        <div className="text-[11px] text-slate-400 font-mono">{report.fileName}</div>
                       </td>
                       <td className="py-3.5 px-4 font-mono text-slate-300">{report.reportingPeriod}</td>
                       <td className="py-3.5 px-4 text-slate-400">{report.uploadedAt}</td>
@@ -450,7 +450,7 @@ export const HistoryPage: React.FC = () => {
                             {report.flagsCount}
                           </span>
                         ) : (
-                          <span className="font-mono text-slate-500">0</span>
+                          <span className="font-mono text-slate-400">0</span>
                         )}
                       </td>
                       <td className="py-3.5 px-4">

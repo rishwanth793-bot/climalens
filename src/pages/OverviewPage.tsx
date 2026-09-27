@@ -119,7 +119,7 @@ export const OverviewPage: React.FC = () => {
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 px-2.5 py-0.5 rounded border border-emerald-800/80">
               AI Environmental Verification &amp; Intelligence
             </span>
-            <span className="text-slate-600 font-mono text-xs">•</span>
+            <span className="text-slate-300 font-mono text-xs">•</span>
             <span className="text-[10px] font-mono font-semibold text-slate-400">
               SAMPLE REPORT / DEMO DATA (FICTIONAL FACILITY)
             </span>
@@ -238,7 +238,7 @@ export const OverviewPage: React.FC = () => {
         {/* Metric Switcher Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#1E293B] pb-4">
           <div>
-            <div className="text-[10px] font-mono uppercase text-slate-500 font-bold">
+            <div className="text-[10px] font-mono uppercase text-slate-400 font-bold">
               Primary Environmental Trend
             </div>
             <h2 className="text-xl font-bold text-white mt-0.5">
@@ -407,13 +407,13 @@ export const OverviewPage: React.FC = () => {
               onClick={() => setActiveView(item.view)}
               className="p-2.5 rounded-xl bg-[#0B0F17] hover:bg-[#182338] border border-[#1E293B] transition-all text-left group cursor-pointer"
             >
-              <div className="text-[9px] font-mono text-slate-500 font-bold group-hover:text-emerald-400 transition-colors">
+              <div className="text-[9px] font-mono text-slate-400 font-bold group-hover:text-emerald-400 transition-colors">
                 {item.step}
               </div>
               <div className="text-[11px] font-bold text-slate-200 mt-0.5 truncate">
                 {item.title}
               </div>
-              <div className="text-[9px] text-slate-500 mt-1 leading-snug truncate">
+              <div className="text-[9px] text-slate-400 mt-1 leading-snug truncate">
                 {item.desc}
               </div>
             </button>
@@ -469,7 +469,7 @@ export const OverviewPage: React.FC = () => {
               </div>
 
               <div className="pt-2 border-t border-[#1E293B] flex items-center justify-between">
-                <span className="text-[10px] font-mono text-slate-500">
+                <span className="text-[10px] font-mono text-slate-400">
                   Page {flag.sourcePage} • {flag.status}
                 </span>
 
